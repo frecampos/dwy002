@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu lavado de auto</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+     
+    <div id="contenedor">
+
+    <div id="header"> 
+      <img src="{% static 'img/019-car service.png' %}" id="logo" > 
+      <div id=encabezado>  <h1> Tu lavado de auto </h1></div>
+    </div>
+
+
+    <div id="nav">  
+
+   <nav>
+     <ol>
+       <li><a href="{% url 'INDX' %}">Inicio</a></li>
+       <li><a href="">Registro</a></li>
+       <li><a href="">Insumos</a></li>
+       <li><a href="">Ubicacion</a></li>
+       <li><a href="{% url 'GALE' %}">Galeria</a></li>
+       <li><a href="">La empresa</a></li>
+     </ol>
+   </nav>
+
+    </div>
+
+
+    <div id="contenido">
+    
+      <div id="section">
+
+       <div class="slider">
+         <ul>
+           <li><img src="{% static 'img/Slider-1.jpg' %}" alt=""></li>
+           <li><img src="{% static 'img/Slider-2.jpeg' %}" alt=""></li>
+           <li><img src="{% static 'img/Slider-3.jpg' %}" alt=""></li>
+         </ul>
+       </div>
+
+       <div id=titulo><h1>Servicios</h1></div>
+
+       <div class="servicios">
+        
+        <div>
+          <pre><h1>Lavado exterior                      $ 4.000</h1></pre> 
+          <pre><h1>Lavado interior                       $ 6.000</h1></pre>
+          <pre><h1>Lavado completo                    $ 10.000</h1></pre>
+        </div>
+
+       </div>
+
+       <div class="parrafo">
+         
+        <p> <h1>Somos una empresa de lavados de autos en la cual garantizamos seguridad 
+               y confianza con nuestros clientes al momento de ofrecer nuestros servicios,
+               Contamos con clientes que llevan años con nosotros y se sienten sastifechos 
+            </h1></p>
+      </div>
+
+
+      
+       
+
+      </div>
+
+
+
+      <div id="aside">
+        
+        <div id="reseñas"><h1>Reseñas</h1></div>
+         
+        <div class="comentarios">
+      
+          <div><h1>Nadia Torres</h1>
+          <p>Se preocuparon de cada detalle de mi auto quedo bien lavado
+            con un olor auto nuevo ademas el personal muy amable me consejo
+            como debo cuidar mi auto 
+          </p></div>
+
+          <div><h1>Juan Cancino</h1>
+            <p> Seguro confiable y muy recomendable nunca me habia 
+                sentido seguro en un lavado de autos como este
+            </p></div>
+
+            <div><h1>Sebastian Villaroel</h1>
+              <p> Me dieron un tiempo estimado de espera a lo que estaria
+                  listo mi auto y fueron muy puntuales en la hora ademas
+                  el personal es agradable
+              </p></div>
+
+              <div><h1>Hector Cayupe</h1>
+                <p>Navegando por internet me econtre con esta pagina
+                  que ofrece servicios de lavados de autos y la verdad
+                  yo no me sentia seguro hasta que lleve mi auto y quede encantado
+                </p></div>
+
+                <div><h1>Anonymous</h1>
+                  <p> muy seguro llevo un año lavando mi auto aqui ya que no 
+                    por tema de tiempo no puedo lavarlo yo mismo ademas 
+                    derrepente se me quedan cosas en el auto y ellos las guardan
+                    por eso me siento muy seguro en este lugar
+                  </p></div>
+         </div>
+
+      </div>
+    
+    </div>
+
+
+    <div id="footer">
+      <div><h1>Contacto</h1></div>
+      <div><h1>Correo: tulavadodeauto@gmail.com Numero :+569 1234 5678</h1></div>
+
+    </div>
+
+    
+
+
+
+   </div>
+
+
+</body>
+</html>
+

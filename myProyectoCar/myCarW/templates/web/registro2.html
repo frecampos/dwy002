@@ -1,0 +1,36 @@
+{% extends "web/base.html" %} {% load static %} {% block estilos %}
+<link rel="stylesheet" href="{% static 'css/registro.css' %}"> {% endblock estilos %} {% block contenido %}
+<div id="contenido">
+
+    <div id="section">
+
+
+        <h1 id="titulo">Registro de clientes</h1>
+        <h1 id="subtitulo">Usted debe completar el siguiente formulario para registrarse como cliente</h1>
+
+
+        <div class="registro">
+            <h1>Formulario de Registro</h1>
+            <script src="{% static 'js/funciones.js' %}"></script>
+            <script src="{% static 'js/cliente.js' %}"></script>
+
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input class="controls" type="text" name="nombre" id="txtnombre" placeholder="Ingrese el nombre" required minlength="3" maxlength="8">
+                <input class="controls" type="text" name="apellido" id="txtapellido" placeholder="Ingrese el apellido" required minlength="3" maxlength="8">
+                <input class="controls" type="email" name="email" id="txtemail" placeholder="Ingrese el email" required>
+                <input class="controls" type="text" name="nomusuario" id="txtnomusuario" placeholder="ingrese el nombre de usuario" required minlength="8">
+                <input class="controls" type="password" name="contrasena" id="txtcontrasena" placeholder="Ingrese una contraseña" required minlength="8">
+
+                <input class="botons" type="submit" value="Registrar">
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+<div style="text-align: center;color: brown;">
+    <h2>{{msg}}</h2>
+</div>
+{% endblock contenido %}

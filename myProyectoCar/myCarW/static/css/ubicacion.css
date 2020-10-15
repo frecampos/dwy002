@@ -1,0 +1,443 @@
+*{
+    margin: 0%; /* reseteo el margen */
+    padding: 0%;
+}
+
+
+/*TAMAÑO PC*/
+@media screen and (min-width:1300px){
+
+#contenedor{
+
+    width: 1300px; /* Ancho*/
+    height: 1300px; /* alto*/
+    background-color: yellow; /* Color de fondo*/
+    margin: auto; /* Se genera un margen de manera automatica al centro*/
+    
+}
+
+/*HEADER ENCABEZADO*/
+
+#header{
+    height: 9%;
+    background-color: green;
+    border: solid black;
+
+}
+
+#logo{
+    width: 150px; 
+    height: 100px;
+    padding: 10px;
+    float: left ;
+    margin-left: 35px;
+    
+}
+
+#encabezado{
+ color: white;   /*color de la letra*/
+ font-family: Arial, Helvetica, sans-serif; /*tipo de letra*/
+ font-size: 30px;  /*tamaño del texto*/
+ font-style:oblique ;  /*estiilo de letra*/
+
+
+ margin: 20px; /* matgen*/
+ text-indent: 70px; /* muevo el texto a la derecha*/
+ 
+
+ 
+}
+/*NAV NAVEGADOR*/
+
+#nav{
+    height: 6%; /*alto*/
+    background-color: white;
+    border: solid black;
+    overflow: auto;
+
+}
+
+#nav li{
+    margin: 10px;
+    float: left;
+    display: block;
+    padding: 10px;
+    
+}
+
+#nav li a{
+    color: black;
+    text-decoration: none;
+    font-size: 30px;   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    
+}
+#nav li :hover{
+    text-transform: uppercase;
+}
+
+/*CUERPO TODO LOS CONETENIDOS*/
+
+#contenido{
+
+    width: auto; /* Ancho*/
+    height: 1000px; /* alto*/
+    background-color:yellow; /* Color de fondo*/
+    margin-top:0px;
+    border: solid black;
+
+}
+
+#section{
+    width: 98%; /* Ancho*/
+    height: 98%; /* alto*/
+    background-color:yellow; /* Color de fondo*/
+    margin-top:5px;
+    margin-left: 10px;
+    border: solid white;
+}
+
+#section .titulo{
+    color:green;
+    text-align: center;
+    margin-top: 30px;
+    text-decoration: underline;
+    font-size: 30px;   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+#mapa{
+    margin-top: 70px;
+    text-align: center;
+}
+
+#parrafo{
+    margin-top: 80px;
+    text-align: justify;
+    text-align: center;
+    font-style:oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    color : green;
+}
+
+
+
+
+/*FOOTER*/
+
+#footer {
+    height: 7%; /*alto*/
+    background-color:green;
+    border: solid black;
+    overflow: auto;
+}
+#footer h1{
+    margin: 5px;
+    text-indent: 160px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+}
+
+/*Tamaño Celular*/
+@media screen and (max-width:480px){
+
+    #contenedor{
+
+        width: 100%; /* Ancho*/
+        height: 840px; /* alto*/
+        background-color: yellow; /* Color de fondo*/
+     
+        
+    }
+
+    /*HEADER ENCABEZADO*/
+
+#header{
+    height: 10%;
+    width: auto;
+    background-color: green;
+    border: solid black;
+
+}
+
+#logo{
+    width: 60px; 
+    height: 60px;
+    padding: 10px;
+    float: left ;
+    margin-left: 5px;
+    
+}
+
+#encabezado{
+ color: white;   /*color de la letra*/
+ font-family: Arial, Helvetica, sans-serif; /*tipo de letra*/
+ font-size: 13px;  /*tamaño del texto*/
+ font-style:oblique ;  /*estiilo de letra*/
+
+
+ margin: 25px; /* matgen*/
+ text-indent: 15px; /* muevo el texto a la derecha*/
+ 
+
+ 
+}
+/*NAV NAVEGADOR*/
+
+#nav{
+    height: 13%; /*alto*/
+    background-color: white;
+    border: solid black;
+    overflow: auto;
+
+}
+
+#nav li{
+    margin: 4px;
+    float: left;
+    display: block;
+    padding: 10px;
+    
+}
+
+#nav li a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    
+}
+#nav li :hover{
+    text-transform: uppercase;
+}
+
+/*CUERPO TODO LOS CONETENIDOS*/
+
+#contenido{
+
+    width: auto; /* Ancho*/
+    height: 720px; /* alto*/
+    background-color:yellow; /* Color de fondo*/
+    margin-top:0px;
+    border: solid black;
+
+}
+
+#section{
+    float: left;
+    width: 90%; /* Ancho*/
+    height: 95%; /* alto*/
+    background-color:yellow; /* Color de fondo*/
+    margin-top:10px;
+    margin-left: 15px;
+    border: solid white;
+}
+
+#section .titulo{
+    color:green;
+    text-align: center;
+    margin-top: 30px;
+    text-decoration: underline;
+    font-size: 15px;   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+#mapa{
+    margin-top: 25px;
+}
+
+#mapa #ajuste{
+      
+    margin-left: 15px;
+    height: 300px;
+    width: 90%;
+}
+
+#parrafo{
+    margin-top: 30px;
+    text-align: justify;
+    text-align: center;
+    font-style:oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color : green;
+}
+
+ /*FOOTER*/
+    
+ #footer {
+    height: 10%; /*alto*/
+    background-color:green;
+    border: solid black;
+    overflow: auto;
+
+}
+#footer h1{
+    margin: 5px;
+    font-size: 17px;
+    text-indent: 20px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif; 
+}
+
+
+}
+
+/*Tamaño Tablet*/
+
+@media screen and (min-width:480px) and (max-width:780px){
+
+    #contenedor{
+
+        width: 1300px; /* Ancho*/
+        height: 1300px; /* alto*/
+        background-color: yellow; /* Color de fondo*/
+        margin: auto; /* Se genera un margen de manera automatica al centro*/
+        
+    }
+    
+    /*HEADER ENCABEZADO*/
+    
+    #header{
+        height: 12%;
+        background-color: green;
+        border: solid black;
+    
+    }
+    
+    #logo{
+        width: 150px; 
+        height: 100px;
+        margin-top: 15px;
+        float: left ;
+        margin-left: 35px;
+        
+    }
+    
+    #encabezado{
+     color: white;   /*color de la letra*/
+     font-family: Arial, Helvetica, sans-serif; /*tipo de letra*/
+     font-size: 45px;  /*tamaño del texto*/
+     font-style:oblique ;  /*estiilo de letra*/
+    
+    
+     margin: 30px; /* matgen*/
+     text-indent: 70px; /* muevo el texto a la derecha*/
+     
+    
+     
+    }
+    
+    /*NAV NAVEGADOR*/
+
+#nav{
+    height: 10%; /*alto*/
+    background-color: white;
+    border: solid black;
+    overflow: auto;
+
+}
+
+#nav li{
+    margin-top: 25px;
+    float: left;
+    display: block;
+    padding: 10px;
+    
+}
+
+#nav li a{
+    color: black;
+    text-decoration: none;
+    font-size: 45px;   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    
+    
+}
+#nav li :hover{
+    text-transform: uppercase;
+}
+
+/*CUERPO TODO LOS CONETENIDOS*/
+
+#contenido{
+
+    width: auto; /* Ancho*/
+    height: 1600px; /* alto*/
+    background-color:yellow; /* Color de fondo*/
+    margin-top:0px;
+    border: solid black;
+
+}
+
+#section{
+    width: 98%; /* Ancho*/
+    height: 98%; /* alto*/
+    background-color:yellow; /* Color de fondo*/
+    margin-top:5px;
+    margin-left: 10px;
+    border: solid white;
+
+}
+
+#section .titulo{
+    color:green;
+    text-align: center;
+    margin-top: 30px;
+    text-decoration: underline;
+    font-size: 60px;   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+#mapa{
+    margin-top: 70px;
+    text-align: center;
+}
+
+#mapa #ajuste{
+      
+    text-align: center;
+    height: 700px;
+    width: 80%;
+}
+
+#parrafo{
+    margin-top: 80px;
+    text-align: justify;
+    text-align: center;
+    font-style:oblique;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+    color : green;
+}
+
+ /*FOOTER*/
+
+ #footer {
+    height: 15%; /*alto*/
+    background-color:green;
+    border: solid black;
+    overflow: auto;
+
+}
+#footer h1{
+    margin-top: 30px;
+    text-indent: 100px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 40px;
+}
+
+
+
+
+
+}

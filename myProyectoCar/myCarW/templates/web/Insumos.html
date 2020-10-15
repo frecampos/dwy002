@@ -1,0 +1,39 @@
+{% extends "web/base.html" %}
+{% load static %}
+{% block estilos %}
+   <link rel="stylesheet" href="{% static 'css/insumos.css' %}">
+{% endblock estilos %}
+   
+ {% block contenido %}
+  <div id="contenido">
+    
+      <div id="section">
+
+        
+          <h1 id="titulo">Ingreso de insumos</h1>
+         <h1 id="subtitulo">Usted debe completar el siguiente formulario para ingresar los insumos</h1>
+        
+        
+        <div class="registro"> 
+             <h1>Formulario de insumos</h1>
+             <script src="js/insumos.js"></script>
+
+          <input class="controls" type="text" name="nombreinsumo" id="txtnombreinsumo" placeholder=" Ingrese el nombre del insumo" required minlength="3" maxlength="120">
+          <input class="controls" type="number" name="precio" id="txtprecio" placeholder="Ingrese el precio del insumo" required min="1">
+          <textarea class="controlsdes" name="descripcion" id="txtdes" rows="10" cols="40" placeholder="Ingrese una descripcion del insumo" minlength="3" maxlength="200"></textarea>
+          <input class="botons" type="submit" value="LocalStorage" onclick="Grabar(); listarinsu();">
+          <input class="botons" type="submit" value="Ingresar">
+
+          
+          
+
+        </div>
+
+      </div>
+    
+    </div>
+ {% endblock contenido %}  
+   
+
+
+ 

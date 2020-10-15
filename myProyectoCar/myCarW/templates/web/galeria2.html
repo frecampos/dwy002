@@ -1,0 +1,78 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+    {% block estilos %}
+    <link rel="stylesheet" href="{% static 'css/galeria.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script>
+        $(document).ready(function(){
+            $('.slider').bxSlider();
+        });
+    </script>
+    {% endblock estilos %}
+   
+
+    {% block contenido %}
+    <div id="contenido">
+    
+      <div id="section">
+  
+        <div id="titulo1"><h1>Vehiculo en servicio</h1></div>
+
+        <div class="galeria1">
+          <div class="slider">
+              <div>
+                  <li><img src="{% static 'img/vehiculo en servicio/galeria1.jpg' %}"></li>
+              </div>
+              <div>
+                  <li><img src="{% static 'img/vehiculo en servicio/galeria2.jpg' %}"></li>
+              </div>
+              <div>
+                  <li><img src="{% static 'img/vehiculo en servicio/galeria3.jpg' %}"></li>
+              </div>
+              <div>
+                  <li><img src="{% static 'img/vehiculo en servicio/galeria4.jpg' %}"></li>
+              </div>
+              <div>
+                  <li><img src="{% static 'img/vehiculo en servicio/galeria5.jpg' %}"></li>
+              </div>
+              <div>
+                  <li><img src="{% static 'img/vehiculo en servicio/galeria6.jpeg' %}"></li>
+              </div>
+          </div>
+      </div>
+
+      <div id="titulo2"><h1>Maquinas de servicio</h1></div>
+    
+      <div class=galeria2>
+          <div class="slider">
+              <div>
+                  <li><img src="{% static 'img/maquinas de lavado/lavado1.jpg' %}"></li>
+              </div>
+              <div>
+                  <li><img src="{% static 'img/maquinas de lavado/lavado2.jpg' %}"></li>
+              </div>
+              <div>
+                  <li><img src="{% static 'img/maquinas de lavado/lavado3.jpg' %}"></li>
+              </div>
+              <div>
+                  <li><img src="{% static 'img/maquinas de lavado/lavado4.jpg' %}"></li>
+              </div>
+          </div>
+      </div>
+
+
+
+      
+
+
+
+
+
+      </div>
+    
+    </div>
+    {% endblock contenido %}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu lavado de auto</title>
+    {% block estilos %}
+    
+    {% endblock estilos %}
+</head>
+<body>
+
+    <div id="contenedor">
+
+        <div id="header">
+            <img src="{% static 'img/019-car service.png' %}" id="logo">
+            <div id=encabezado>
+                <h1> Tu lavado de auto </h1>
+            </div>
+        </div>
+        <div id="nav">
+            <nav>
+                <ol>
+                    <li><a href="{% url 'INDX' %}">Inicio</a></li>
+                    <li><a href="{% url 'INSUMOS' %}">Insumos</a></li>
+                    <li><a href="">Ubicacion</a></li>
+                    <li><a href="{% url 'GALE' %}">Galeria</a></li>
+                    <li><a href="">La empresa</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url 'LOGOUT' %}">Cerrar Sesion</a></li>
+                        <li><a href="">Bienvenido: {{user.first_name}} {{user.last_name}}</a></td>
+                    {% else %}
+                        <li><a href="{% url 'LOGIN' %}">Login</a></li>
+                        <li><a href="{% url 'REGIS' %}">Registro</a></li>
+                    {% endif %}
+                     
+                    
+
+                   
+                </ol>
+            </nav>
+        </div>
+        {% block contenido %}
+        
+        {% endblock contenido %}        
+        <div id="footer">
+            <div>
+                <h1>Contacto</h1>
+            </div>
+            <div>
+                <h1>Correo: tulavadodeauto@gmail.com Numero :+569 1234 5678</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

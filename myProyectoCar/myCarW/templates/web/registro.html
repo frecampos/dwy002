@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu lavado de auto</title>
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+     
+    <div id="contenedor">
+
+    <div id="header"> 
+      <img src="img/019-car service.png" id="logo" > 
+      <div id=encabezado>  <h1> Tu lavado de auto </h1></div>
+    </div>
+
+
+    <div id="nav">  
+
+   <nav>
+     <ol>
+      <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="registro.html">Registro</a></li>
+        <li><a href="Insumos.html">Insumos</a></li>
+        <li><a href="ubicacion.html">Ubicacion</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="la_empresa.html">La empresa</a></li>
+      </ol>
+   </nav>
+
+    </div>
+
+
+    <div id="contenido">
+    
+      <div id="section">
+
+        
+          <h1 id="titulo">Registro de clientes</h1>
+         <h1 id="subtitulo">Usted debe completar el siguiente formulario para registrarse como cliente</h1>
+        
+        
+        <div class="registro"> 
+             <h1>Formulario de Registro</h1>
+             <script src="js/funciones.js"></script>
+             <script src="js/cliente.js"></script>
+             
+          <input class="controls" type="text" name="rut" id="txtrut" placeholder="Ingrese el rut" required>
+          <input class="controls" type="text" name="nombre" id="txtnombre" placeholder="Ingrese el nombre" required minlength="3" maxlength="8">
+          <input class="controls" type="text" name="apellido" id="txtapellido" placeholder="Ingrese el apellido" required minlength="3" maxlength="8">
+          <input class="controls" type="email" name="email" id="txtemail" placeholder="Ingrese el email" required>
+        <input class="controls" type="date" name="fecha" id="fecha" placeholder="fecha de nacimiento" required onclick="validarfecha"> 
+          <input class="controls" type="text" name="nomusuario" id="txtnomusuario" placeholder="ingrese el nombre de usuario" required minlength="8">
+          <input class="controls" type="password" name="contrasena" id="txtcontrasena" placeholder="Ingrese una contraseña" required minlength="8">
+          <p> Estoy de acuerdo con terminos y condiciones</p> 
+          <input class="botons" type="submit" value="LocalStorage" onclick="grabarcliente(); listarcli();">
+          <input class="botons" type="submit" value="Registrar" onclick="validarut(); validarCorreo();">
+
+          
+          
+
+        </div>
+
+      </div>
+    
+    </div>
+
+
+    <div id="footer">
+      <div><h1>Contacto</h1></div>
+      <div><h1>Correo: tulavadodeauto@gmail.com Numero :+569 1234 5678</h1></div>
+
+    </div>
+
+    
+
+
+
+   </div>
+
+
+</body>
+</html>
+
