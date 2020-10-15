@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import SliderIndex,SliderGaleria,MisionVision
+from .models import SliderIndex,SliderGaleria,MisionVision,Insumos
 
 # Register your models here.
 class SliderIndexAdmi(admin.ModelAdmin):
@@ -10,3 +10,4 @@ class SliderIndexAdmi(admin.ModelAdmin):
 admin.site.register(SliderIndex,SliderIndexAdmi)
 admin.site.register(SliderGaleria)
 admin.site.register(MisionVision)
+admin.site.register(Insumos)

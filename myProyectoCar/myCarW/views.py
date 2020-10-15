@@ -1,12 +1,12 @@
 from django.shortcuts import render
-from .models import SliderIndex
+from .models import SliderIndex,Insumos
 
 # debemos utilizar la tabla de Usuarios (User)
 from django.contrib.auth.models import User
 # importar las librerias de validacion (authenticated)
 from django.contrib.auth import authenticate, logout, login as login_autent
 # agregar un decorador  es para impedir el ingreso a una pagina del sitio
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 
 
 # Create your views here.
@@ -16,10 +16,33 @@ def index(request):
 
 def galeria(request):    
     return render(request,'web/galeria2.html')
-    
+
+def admin_insumos(request):
+    return render(request,'web/admin_insumos.html')
+
 @login_required(login_url='/login/')
+@permission_required('myCarW.add_insumos',login_url='/login/')
+@permission_required('myCarW.change_insumos',login_url='/login/')
+@permission_required('myCarW.delete_insumos',login_url='/login/')
+@permission_required('myCarW.view_insumos',login_url='/login/')
 def insumos(request):
+    if request.POST:
+        nombre = request.POST.get("nombreinsumo")
+        precio = request.POST.get("precio")
+        desc = request.POST.get("descripcion")
+        stock = request.POST.get("stock")
+
+        insumo = Insumos(
+            nombre=nombre,
+            precio=precio,
+            descripcion=desc,
+            stock=stock
+        )
+        insumo.save()
+        return render(request,'web/insumos.html',{'msg':'insumo grabado'})
+        
     return render(request,'web/insumos.html')
+
 
 def logout_vista(request):
     logout(request)

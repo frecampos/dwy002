@@ -1,41 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "web/base.html" %} {% load static %} {% block estilos %}
+<link rel="stylesheet" href="{% static 'css/registro.css' %}"> {% endblock estilos %} {% block contenido %}
+<div id="contenido">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login de Acceso</title>
-</head>
+    <div id="section">
 
-<body>
-    <form action="" method="POST">
-        {% csrf_token %}
-        <table border=1>
-            <tr>
-                <td colspan="2">Formulario de Login</td>
-            </tr>
-            <tr>
-                <td>Usuario</td>
-                <td>
-                    <input type="text" name="txtUser">
-                </td>
-            </tr>
-            <tr>
-                <td>Password</td>
-                <td>
-                    <input type="password" name="txtPass">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="submit" value="enviar">
-                </td>
-            </tr>
-        </table>
-    </form>
-    <div>
-        <h2>{{msg}}</h2>
+        <div class="registro">
+            <h1>Formulario de Login</h1>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input class="controls" type="text" name="txtUser" id="txtUser" placeholder="ingrese el nombre de usuario" >
+                <input class="controls" type="password" name="txtPass" id="txtPass" placeholder="Ingrese una contraseña">
+                <input class="botons" type="submit" value="Registrar">
+            </form>
+
+        </div>
+
     </div>
-</body>
 
-</html>
+</div>
+<div style="text-align: center;color: brown;">
+    <h2>{{msg}}</h2>
+</div>
+{% endblock contenido %}
+
+
+
+
+    

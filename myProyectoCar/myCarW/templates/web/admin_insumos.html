@@ -1,0 +1,31 @@
+{% extends "web/base.html" %} {% load static %} {% block estilos %}
+<link rel="stylesheet" href="{% static 'css/insumos.css' %}"> {% endblock estilos %} {% block contenido %}
+<div id="contenido">
+
+    <div id="section">
+
+        <h1 id="titulo">Administracion de insumos</h1>
+        <div class="registro">
+            <table>
+                <tr>
+                    <td>Nombre</td>
+                    <td>Precio</td>
+                    <td>Descripcion</td>
+                    <td>Stock</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock contenido %}

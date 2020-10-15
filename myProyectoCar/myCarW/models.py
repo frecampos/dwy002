@@ -23,3 +23,11 @@ class MisionVision(models.Model):
     def __str__(self):
         return self.ident
 
+class Insumos(models.Model):    
+    nombre = models.CharField(max_length=120,primary_key=True)
+    precio = models.IntegerField()
+    descripcion = models.TextField()
+    stock = models.IntegerField()
+
+    def __str__(self):
+        return self.nombre
