@@ -1,0 +1,31 @@
+{% extends "web/base.html" %} {% load static %} {% block estilos %}
+<link rel="stylesheet" href="{% static 'css/insumos.css' %}"> {% endblock estilos %} {% block contenido %}
+<div id="contenido">
+
+    <div id="section">
+
+        <h1 id="titulo">Ingreso de insumos</h1>
+        <h1 id="subtitulo">Usted debe completar el siguiente formulario para ingresar los insumos</h1>
+        <script>
+            function ir() {
+                location.href = "/adm_insumos/";
+            }
+        </script>
+        <div class="registro">
+            <form action="{% url 'MODIFICAR' %}" method="POST">
+                {% csrf_token %}
+                <h1>Formulario de Modificacion de insumos</h1>
+                <p>{{msg}}</p>
+                <input class="controls" type="text" value="{{insumo.nombre}}" name="nombreinsumo" id="txtnombreinsumo" placeholder=" Ingrese el nombre del insumo" required minlength="3" maxlength="120">
+                <input class="controls" type="number" value="{{insumo.precio}}" name="precio" id="txtprecio" placeholder="Ingrese el precio del insumo" required min="1">
+                <textarea class="controlsdes" name="descripcion" id="txtdes" rows="10" cols="40" placeholder="Ingrese una descripcion del insumo" minlength="3" maxlength="200">{{insumo.descripcion}}</textarea>
+                <input class="controls" type="number" value="{{insumo.stock}}" name="stock" id="stock" placeholder="Ingrese el stock del insumo" required min="1">
+                <input class="botons" type="submit" value="Modificar">
+                <input class="botons" type="button" onclick="ir()" value="Adm. Insumos">
+            </form>
+        </div>
+
+    </div>
+
+</div>
+{% endblock contenido %}

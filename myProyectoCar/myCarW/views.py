@@ -17,14 +17,62 @@ def index(request):
 def galeria(request):    
     return render(request,'web/galeria2.html')
 
+@login_required(login_url='/login/')
+@permission_required('myCarW.change_insumos',login_url='/login/')
+@permission_required('myCarW.view_insumos',login_url='/login/')
+def modificar_insumos(request):
+    if request.POST:
+        nombre = request.POST.get("nombreinsumo")
+        precio = request.POST.get("precio")
+        desc = request.POST.get("descripcion")
+        stock = request.POST.get("stock")
+        try:
+            insumo = Insumos.objects.get(nombre=nombre)
+            insumo.precio = precio
+            insumo.descripcion = desc
+            insumo.stock = stock
+            insumo.save()
+            msg ='Actualizo'
+        except:
+            msg='No Modifico Reg.'
+    insumos = Insumos.objects.all()
+    return render(request,'web/admin_insumos.html',{'insumos':insumos,'msg':msg})
+
+
+
+@login_required(login_url='/login/')
+@permission_required('myCarW.view_insumos',login_url='/login/')
+def modificar_vista(request,id):
+    try:
+        insumo = Insumos.objects.get(nombre=id)
+        return render(request,'web/insumos_mod.html',{'insumo':insumo})
+    except:
+        msg ="No Existe Insumo"
+    insumos = Insumos.objects.all()
+    return render(request,'web/admin_insumos.html',{'insumos':insumos,'msg':msg})  
+    
+
+@login_required(login_url='/login/')
+@permission_required('myCarW.delete_insumos',login_url='/login/')
+def eliminar(request,id):
+    try:
+        insumo = Insumos.objects.get(nombre=id)
+        insumo.delete()
+        msg ="Insumo Eliminado"
+    except:
+        msg="No Elimino Insumo"
+    insumos = Insumos.objects.all()
+    return render(request,'web/admin_insumos.html',{'insumos':insumos,'msg':msg})  
+    
+
+@permission_required('myCarW.view_insumos',login_url='/login/')
 def admin_insumos(request):
-    return render(request,'web/admin_insumos.html')
+    insumos = Insumos.objects.all()
+    return render(request,'web/admin_insumos.html',{'insumos':insumos})
 
 @login_required(login_url='/login/')
 @permission_required('myCarW.add_insumos',login_url='/login/')
 @permission_required('myCarW.change_insumos',login_url='/login/')
-@permission_required('myCarW.delete_insumos',login_url='/login/')
-@permission_required('myCarW.view_insumos',login_url='/login/')
 def insumos(request):
     if request.POST:
         nombre = request.POST.get("nombreinsumo")
