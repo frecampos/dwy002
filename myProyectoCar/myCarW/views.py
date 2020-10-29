@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import SliderIndex,Insumos
+from .models import SliderIndex,Insumos,SliderGaleria
 
 # debemos utilizar la tabla de Usuarios (User)
 from django.contrib.auth.models import User
@@ -14,8 +14,9 @@ def index(request):
     autos = SliderIndex.objects.all()
     return render(request,'web/index2.html',{'autos':autos})
 
-def galeria(request):    
-    return render(request,'web/galeria2.html')
+def galeria(request):
+    lista_ima = SliderGaleria.objects.all()
+    return render(request,'web/galeria2.html',{'lista_imagenes':lista_ima})
 
 @login_required(login_url='/login/')
 @permission_required('myCarW.change_insumos',login_url='/login/')

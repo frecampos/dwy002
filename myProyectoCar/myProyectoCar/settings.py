@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'myCarW.apps.MycarwConfig',
+    'myCarW.apps.MycarwConfig',# --> aplicacion web
+    'api.apps.ApiConfig', # --> aplicacion API REST
+    'rest_framework', # --> libreria que permite la creacion de un servicio API REST
 ]
 
 MIDDLEWARE = [
@@ -122,3 +124,11 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+# definicion de variables de entorno para el envio de correo
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = 'camp.fred.2020@gmail.com' #CUENTA DE CORREO
+EMAIL_HOST_PASSWORD = 'isidora.7' # CONTRASEÑA
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

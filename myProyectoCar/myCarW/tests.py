@@ -1,17 +1,19 @@
 from django.test import TestCase
 import unittest
-from .models import MisionVision,SliderGaleria,SliderIndex,Insumos
+from .models import MisionVision,Insumos
 # Create your tests here.
 class TestEjemplos(unittest.TestCase):
 
     def test_de_iguales(self):
+
         self.assertEqual('ii','ii')
 
     def test_no_esta_el_texto(self):
+
         self.assertFalse('hola' in ' este es un HOLA mundo')
 
     def grabar_insumo(self):
-        valor =0
+        valor = 0
         try:
             insumo = Insumos(
                 nombre='JaJa', 

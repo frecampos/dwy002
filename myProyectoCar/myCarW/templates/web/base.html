@@ -28,6 +28,7 @@
                     <li><a href="">Ubicacion</a></li>
                     <li><a href="{% url 'GALE' %}">Galeria</a></li>
                     <li><a href="">La empresa</a></li>
+                    <li><a href="{% url 'password_reset' %}">Recuperar Contraseña</a></li>
                     {% if user.is_authenticated %}
                         <li><a href="{% url 'LOGOUT' %}">Cerrar Sesion</a></li>
                         <li><a href="">Bienvenido: {{user.first_name}} {{user.last_name}}</a></td>

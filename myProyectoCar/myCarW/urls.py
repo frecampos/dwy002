@@ -13,4 +13,6 @@ urlpatterns = [
     path('eliminar/<id>/',eliminar,name='ELIMINAR'),
     path('modificar_vista/<id>/',modificar_vista,name='MODIFICAR_V'),
     path('modificar/',modificar_insumos,name='MODIFICAR'),
+    
+    path('accounts/login/',login,name='ACCOUNTSLOGIN'),
 ]
